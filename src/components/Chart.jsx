@@ -21,7 +21,7 @@ ChartJS.register(
 
 export function Chart() {
     const { reports } = useReport()
-    const filteredValues = reports?.revenuePerHour.filter(value => value !== 0) || [];
+    const filteredValues = reports?.revenuePerHour?.filter(value => value !== 0) || [];
     const labels = filteredValues || []
     const data = {
         labels,
