@@ -9,10 +9,10 @@ import { Chart } from './Chart'
 
 
 const DashboardContainer = ({ children, textWelcome }) => {
-  const { cerrarSesion, idu, obtenerUSuario } = useAuth();
+  const { cerrarSesion } = useAuth();
   const reports = useReport();
   const [state, setState] = useState()
-  const [estado, setEstado] = useState(false)
+  const [estado, setestado] = useState(true)
   useEffect(() => {
     setState(reports?.reports)
   }, [state])
@@ -34,6 +34,7 @@ const DashboardContainer = ({ children, textWelcome }) => {
             <Card
               titlecard='Ingresos'
               textMoney='$442,000'
+              estado={true}
             >
               <div>
                 <Chart />
@@ -48,6 +49,7 @@ const DashboardContainer = ({ children, textWelcome }) => {
               color='#EB455F'
               textSub='10.8%'
               angle='-30'
+              estado={true}
             >
             </Card>
           </div>
@@ -59,6 +61,7 @@ const DashboardContainer = ({ children, textWelcome }) => {
               color='#77D9A1'
               textSub='12.6%'
               angle='220'
+              estado={true}
             >
             </Card>
           </div>

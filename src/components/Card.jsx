@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import { BsArrowDown } from 'react-icons/bs';
-const Card = ({ children, titlecard, textMoney, backgroundColor, color, textSub, angle, top }) => {
+const Card = ({ children, titlecard, textMoney, backgroundColor, color, textSub, angle, top, estado }) => {
     return (
         <CardDashboard>
             <div>
                 <h1>{titlecard}</h1>
-                <p>{textMoney} <span>mxn</span></p>
+                <p>{textMoney} {estado === true && <span>mxn</span>}</p>
             </div>
             <Bullet
                 backgroundColor={backgroundColor}
